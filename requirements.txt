@@ -1,0 +1,8 @@
+bidict
+flask
+bootstrap-flask
+eventlet
+flask-socketio
+gunicorn
+pillow
+pip-chill
