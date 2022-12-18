@@ -3,5 +3,5 @@
 **Link Project:** https://fnilvuwu1.pythonanywhere.com
 
 ## TODO(s):
-- [ ] Improve video processing performance
+- [X] Improve video processing performance (stage 1)
 - [ ] UI revamp
