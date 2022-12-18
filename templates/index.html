@@ -59,10 +59,18 @@
       <!-- CAMERA -->
       <div class="p-3 mt-3 text-center">
         <h1 class="text-center fw-bolder mb-5">Check here</h1>
-        <p class="logs" id="model_log">Loading the model, it may take a while...</p>
-            <video id="cam_input" height="480" width="640" style="display: none;"></video>
-            <canvas id="canvas_output" width="50%"></canvas>
-            <canvas id="canvas_roi" height="280" width="320"></canvas>
+        <!-- <p class="logs" id="model_log">Loading the model, it may take a while...</p> -->
+
+          <video id="cam_input" hidden></video>
+          <div class="row">
+            <div class="col-sm">
+              <canvas id="canvas_output" width="854px" height="480px"></canvas>
+            </div>
+            <div class="col-sm">
+              <canvas id="canvas_roi"></canvas>
+            </div>
+          </div>
+
         </div>
         <!-- <p>How are you feeling today?</p> -->
       </div>
@@ -184,11 +192,14 @@
         }
       });
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.0.0/dist/tf.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-tflite@0.0.1-alpha.8/dist/tf-tflite.min.js"></script>
-    <script src="{{ url_for('static', filename='js/utils.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/face-detection.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/opencv.js') }}" onload="openCvReady();"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/control_utils/control_utils.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/face_detection/face_detection.js"
+    crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs/dist/tf.min.js"></script>
+    <script src="{{ url_for('static', filename='js/index.js') }}"></script>
+    <script src="https://docs.opencv.org/4.x/opencv.js" onload="openCvReady();"></script>
     {{ bootstrap.load_js() }}
   </body>
 </html>
