@@ -6,7 +6,7 @@ const roiCtx = canvasRoi.getContext('2d');
 
 const drawingUtils = window;
 const emotions = ["Angry", "Happy", "Sad", "Surprise"];
-let tfliteModel = undefined;
+var tfliteModel;
 
 async function start() {
     await tf.loadLayersModel(
