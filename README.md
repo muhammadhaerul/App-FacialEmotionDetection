@@ -1,6 +1,5 @@
-# emotion-detection-website
-This website can detect emotion based on live face expression.
-Link project : https://fnilvuwu.github.io/Facial-Emotion-Detection-System
+# Facial-Emotion-Detection-System
+**Link Project :** https://fnilvuwu.github.io/Facial-Emotion-Detection-System \
 Implementation of Machine Learning on The Web, Group Member :
 
 1. Ahmad Fauzan Mansur (H071201001)
