@@ -187,6 +187,12 @@ footer {
   width: 300px;
 }
 
+#no-face-found {
+  display: none;
+  color: red;
+  text-align: center;
+}
+
 .container {
   display: flex;
   align-items: center;
