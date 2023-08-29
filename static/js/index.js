@@ -75,6 +75,9 @@ function openCvReady() {
                         canvasCtx.textAlign = "center";
 
                         canvasCtx.fillText(emotions[index], center, sy - 10);
+
+                        // Hide the "No face found" message
+                        noFaceFoundElement.style.display = 'none';
                     } else {
                         canvasCtx.fillText("Loading the model", center, sy - 50);
                     }
