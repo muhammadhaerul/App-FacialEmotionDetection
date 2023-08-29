@@ -53,6 +53,8 @@ function openCvReady() {
 
                     cv.cvtColor(gray_roi, gray_roi, cv.COLOR_RGBA2GRAY, 0);
                     cv.imshow('canvas_roi', gray_roi);
+                    // Hide the "No face found" message
+                    noFaceFoundElement.style.display = 'none';
                     if (tfliteModel && isModelLoaded) {
                         const outputTensor = tf.tidy(() => {
                             // Transform the image data into Array pixels.
@@ -75,9 +77,6 @@ function openCvReady() {
                         canvasCtx.textAlign = "center";
 
                         canvasCtx.fillText(emotions[index], center, sy - 10);
-
-                        // Hide the "No face found" message
-                        noFaceFoundElement.style.display = 'none';
                     } else {
                         canvasCtx.fillText("Loading the model", center, sy - 50);
                     }
