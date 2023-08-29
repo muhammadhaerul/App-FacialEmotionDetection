@@ -83,6 +83,7 @@ function openCvReady() {
                 } else {
                     // No face detected
                     roiCtx.clearRect(0, 0, canvasRoi.width, canvasRoi.height);
+                    roiCtx.style.display = 'none';
                     noFaceFoundElement.style.display = 'block';
                 }
                 canvasCtx.restore();
